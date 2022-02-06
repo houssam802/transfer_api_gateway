@@ -7,15 +7,6 @@ spring:
     name: API-GATEWAY
   cloud:
     gateway:
-      globalcors:
-        corsConfigurations:
-          '[/**]':
-            allowedOrigins: "https://bank-agent.vercel.app"
-            allowedMethods:
-              - GET
-              - POST
-              - PUT
-              - DELETE
       routes:
         - id: AGENT-SERVICE
           uri: https://ensa-agentapp.herokuapp.com
@@ -25,6 +16,17 @@ spring:
           uri: https://ensa-transferapp.herokuapp.com
           predicates:
             - Path=/api_transfer/**
+      globalcors:
+        corsConfigurations:
+          '[/**]':
+            allowedOrigins: "*"
+            allowedHeaders:
+              - content-type
+            allowedMethods:
+              - GET
+              - POST
+              - PUT
+              - DELETE
     config:
       server:
         git:
