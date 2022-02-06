@@ -16,7 +16,7 @@ import java.time.Duration;
 
 @SpringBootApplication
 @EnableEurekaClient
-//@EnableHystrix
+@EnableHystrix
 public class CloudGatewayApplication {
 
 	public static void main(String[] args) {
