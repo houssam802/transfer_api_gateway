@@ -9,12 +9,11 @@ spring:
     gateway:
       routes:
         - id: AGENT-SERVICE
-          uri: lb://AGENT-SERVICE
+          uri: https://ensa-agentapp.herokuapp.com
           predicates:
             - Path=/api_agent/**
-
         - id: TRANSFER-SERVICE
-          uri: lb://TRANSFER-SERVICE
+          uri: https://ensa-transferapp.herokuapp.com
           predicates:
             - Path=/api_transfer/**
     config:
