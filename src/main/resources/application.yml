@@ -10,7 +10,7 @@ spring:
       globalcors:
         corsConfigurations:
           '[/**]':
-            allowedOrigins: "*"
+            allowedOrigins: "https://bank-agent.vercel.app"
             allowedMethods:
               - GET
               - POST
