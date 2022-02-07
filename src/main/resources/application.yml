@@ -9,21 +9,21 @@ spring:
     gateway:
       routes:
         - id: AGENT-SERVICE
-            uri: https://ensa-agentapp.herokuapp.com
-            predicates:
-              - Path=/api_agent/**
+          uri: https://ensa-agentapp.herokuapp.com
+          predicates:
+            - Path=/api_agent/**
         - id: TRANSFER-SERVICE
-            uri: https://ensa-transferapp.herokuapp.com
-            predicates:
-              - Path=/api_transfer/**
+          uri: https://ensa-transferapp.herokuapp.com
+          predicates:
+            - Path=/api_transfer/**
         - id: BACKOFFICE-SERVICE
-            uri: https://ensa-transferapp.herokuapp.com
-            predicates:
-              - Path=/api_backoffice/**
+          uri: https://ensa-transferapp.herokuapp.com
+          predicates:
+            - Path=/api_backoffice/**
         - id: CLIENT-SERVICE
-            uri: https://ensa-transferapp.herokuapp.com
-            predicates:
-              - Path=/api_backoffice/**
+          uri: https://ensa-transferapp.herokuapp.com
+          predicates:
+            - Path=/api_backoffice/**
       globalcors:
         corsConfigurations:
           '[/**]':
