@@ -16,15 +16,15 @@ spring:
           uri: https://ensa-transferapp.herokuapp.com
           predicates:
             - Path=/api_transfer/**
+      default-filters:
+        - DedupeResponseHeader=Access-Control-Allow-Origin Access-Control-Allow-Credentials, RETAIN_UNIQUE
       globalcors:
-        corsConfigurations:
-          '[/**]':
-            allowedOrigins: "*"
-            allowedMethods:
-              - GET
-              - POST
-              - PUT
-              - DELETE
+          cors-configurations:
+             '[/**]':
+             allowed-origins: "*"
+             allowed-methods: "*"
+             allowed-headers: "*"
+             allow-credentials: true
     config:
       server:
         git:
