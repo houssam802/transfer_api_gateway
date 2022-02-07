@@ -12,17 +12,14 @@ spring:
           uri: https://ensa-agentapp.herokuapp.com
           predicates:
             - Path=/api_agent/**
+          filters:
+            - DedupeResponseHeader=Access-Control-Allow-Credentials Access-Control-Allow-Origin
         - id: TRANSFER-SERVICE
           uri: https://ensa-transferapp.herokuapp.com
           predicates:
             - Path=/api_transfer/**
-      globalcors:
-        cors-configurations:
-          '[/**]':
-              allowed-origins: "*"
-              allowed-methods: "*"
-              allowed-headers: "*"
-              allow-credentials: true
+          filters:
+            - DedupeResponseHeader=Access-Control-Allow-Credentials Access-Control-Allow-Origin
     config:
       server:
         git:
