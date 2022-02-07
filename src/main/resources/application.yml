@@ -11,7 +11,7 @@ spring:
         - id: AGENT-SERVICE
             uri: https://ensa-agentapp.herokuapp.com
             predicates:
-            - Path=/api_agent/**
+              - Path=/api_agent/**
         - id: TRANSFER-SERVICE
             uri: https://ensa-transferapp.herokuapp.com
             predicates:
