@@ -9,23 +9,31 @@ spring:
     gateway:
       routes:
         - id: AGENT-SERVICE
-          uri: https://ensa-agentapp.herokuapp.com
-          predicates:
+            uri: https://ensa-agentapp.herokuapp.com
+            predicates:
             - Path=/api_agent/**
         - id: TRANSFER-SERVICE
-          uri: https://ensa-transferapp.herokuapp.com
-          predicates:
-            - Path=/api_transfer/**
+            uri: https://ensa-transferapp.herokuapp.com
+            predicates:
+              - Path=/api_transfer/**
+        - id: BACKOFFICE-SERVICE
+            uri: https://ensa-transferapp.herokuapp.com
+            predicates:
+              - Path=/api_backoffice/**
+        - id: CLIENT-SERVICE
+            uri: https://ensa-transferapp.herokuapp.com
+            predicates:
+              - Path=/api_backoffice/**
       globalcors:
         corsConfigurations:
           '[/**]':
-            allowedOrigins: "*"
-            allowedHeaders: "*"
-            allowedMethods:
-              - GET
-              - POST
-              - PUT
-              - DELETE
+              allowedOrigins: "*"
+              allowedHeaders: "*"
+              allowedMethods:
+                - GET
+                - POST
+                - PUT
+                - DELETE
     config:
       server:
         git:
