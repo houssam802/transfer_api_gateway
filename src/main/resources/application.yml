@@ -17,13 +17,13 @@ spring:
           predicates:
             - Path=/api_transfer/**
         - id: BACKOFFICE-SERVICE
-          uri: https://ensa-transferapp.herokuapp.com
+          uri: https://ensa-backofficeapp.herokuapp.com
           predicates:
             - Path=/api_backoffice/**
         - id: CLIENT-SERVICE
-          uri: https://ensa-transferapp.herokuapp.com
+          uri: https://ensa-transferclientapp.herokuapp.com
           predicates:
-            - Path=/api_backoffice/**
+            - Path=/api_client/**
       globalcors:
         corsConfigurations:
           '[/**]':
