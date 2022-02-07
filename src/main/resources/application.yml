@@ -16,8 +16,6 @@ spring:
           uri: https://ensa-transferapp.herokuapp.com
           predicates:
             - Path=/api_transfer/**
-      default-filters:
-        - DedupeResponseHeader=Access-Control-Allow-Origin Access-Control-Allow-Credentials, RETAIN_UNIQUE
       globalcors:
         cors-configurations:
           '[/**]':
